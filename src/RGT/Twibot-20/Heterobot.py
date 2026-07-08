@@ -262,7 +262,7 @@ if __name__ == "__main__":
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True)
     valid_loader = DataLoader(valid_dataset, batch_size=1)
     test_loader = DataLoader(test_dataset, batch_size=1)
-    print(f"Running RGT")
+
     model = RGTDetector(args)
     # trainer = pl.Trainer(gpus=1, num_nodes=1, max_epochs=args.epochs, precision=16, log_every_n_steps=1, callbacks=[checkpoint_callback])
     trainer = pl.Trainer(

@@ -254,7 +254,7 @@ if __name__ == "__main__":
                                   batch_size=args.batch_size)  # , num_workers=1
     test_loader = NeighborLoader(data, num_neighbors=[256] * 4, input_nodes=data.test_idx,
                                  batch_size=args.test_batch_size)  # , num_workers=1
-    print(f"Running RGT TWIBOT-22")
+
     model = RGTDetector(args)
     # trainer = pl.Trainer(gpus=1, num_nodes=1, max_epochs=args.epochs, precision=16, log_every_n_steps=1)#, callbacks=[checkpoint_callback])
     trainer = pl.Trainer(
