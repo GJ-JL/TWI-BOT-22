@@ -32,3 +32,4 @@ result*
 *.word2vec
 glove.*
 lightning_logs
+.idea/
