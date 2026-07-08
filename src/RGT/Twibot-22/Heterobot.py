@@ -223,7 +223,7 @@ if __name__ == "__main__":
     train_loader = NeighborLoader(data, num_neighbors=20, inputs_nodes=data.train_idx, batch_size=args.batch_size, shuffle=True)
     valid_loader = NeighborLoader(data, num_neighbors=20, inputs_nodes=data.valid_idx, batch_size=args.batch_size)
     test_loader = NeighborLoader(data, num_neighbors=20, inputs_nodes=data.test_idx, batch_size=args.batch_size)
-    
+    print(f"Running RGT on twibot-22")
     model = RGTDetector(args)
     trainer = pl.Trainer(gpus=1, num_nodes=1, max_epochs=args.epochs, precision=16, log_every_n_steps=1, callbacks=[checkpoint_callback])
     
